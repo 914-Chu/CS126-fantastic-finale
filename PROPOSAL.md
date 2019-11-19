@@ -52,8 +52,8 @@ The reason why I chose game as my final project was to learn how to build a game
 
 ## Libraries
 
-- FMOD: Proprietary sound effects engine for audio
-  * https://www.fmod.com/
+- ofxAudioFile: Proprietary sound effects engine for audio
+  * https://github.com/npisanti/ofxAudioFile/blob/master/example/src/ofApp.cpp
 - ofxActionManager: Mangement of character's actions
   * https://github.com/Furkanzmc/ofxActionManager
 

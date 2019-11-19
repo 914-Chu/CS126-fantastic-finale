@@ -7,6 +7,15 @@
 		<ClCompile Include="src\main.cpp">
 			<Filter>src</Filter>
 		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.cpp">
+			<Filter>addons\ofxAudioFile\src</Filter>
+		</ClCompile>
 		<ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxBaseGui.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
@@ -45,6 +54,15 @@
 		<Filter Include="addons">
 			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
 		</Filter>
+		<Filter Include="addons\ofxAudioFile">
+			<UniqueIdentifier>{010EAA6C-DF0B-6AE2-9885-C475}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioFile\src">
+			<UniqueIdentifier>{C1E6B5D8-5BFE-B788-AEF4-D956}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioFile\libs">
+			<UniqueIdentifier>{FFF0DC64-CB2B-F1B7-B927-0659}</UniqueIdentifier>
+		</Filter>
 		<Filter Include="addons\ofxGui">
 			<UniqueIdentifier>{4F2A59AF-5F4E-704B-D067-EC13}</UniqueIdentifier>
 		</Filter>
@@ -55,6 +73,24 @@
 	<ItemGroup>
 		<ClInclude Include="src\ofApp.h">
 			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.h">
+			<Filter>addons\ofxAudioFile\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\dr_flac.h">
+			<Filter>addons\ofxAudioFile\libs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\dr_mp3.h">
+			<Filter>addons\ofxAudioFile\libs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\dr_wav.h">
+			<Filter>addons\ofxAudioFile\libs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\stb_vorbis.h">
+			<Filter>addons\ofxAudioFile\libs</Filter>
 		</ClInclude>
 		<ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxBaseGui.h">
 			<Filter>addons\ofxGui\src</Filter>

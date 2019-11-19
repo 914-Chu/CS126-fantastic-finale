@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofImage.h"
 #include "ofxAudioFile.h"
 
 class ofApp : public ofBaseApp{
@@ -23,6 +24,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 	
 		 ofxAudioFile audiofile;
+		 ofImage taipei101;
 
          double playhead;
          std::atomic<double> playheadControl;

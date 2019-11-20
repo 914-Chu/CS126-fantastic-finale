@@ -100,7 +100,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Joyce\SFML-2.5.1-windows-vc15-32-bit\SFML-2.5.1\include;%(AdditionalIncludeDirectories);src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joyce\SFML-2.5.1-windows-vc15-32-bit\SFML-2.5.1\include;%(AdditionalIncludeDirectories);src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInstant;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
@@ -108,8 +108,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Joyce\SFML-2.5.1-windows-vc15-32-bit\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Joyce\source\repos\CS126FA19\fantastic-finale-914-Chu\fantastic-finale-914-Chu\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
   </ItemDefinitionGroup>
@@ -120,7 +120,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInstant;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -137,10 +137,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <PreprocessorDefinitions>SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Joyce\SFML-2.5.1-windows-vc15-32-bit\SFML-2.5.1\include;%(AdditionalIncludeDirectories);src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joyce\SFML-2.5.1-windows-vc15-32-bit\SFML-2.5.1\include;%(AdditionalIncludeDirectories);src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInstant;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -152,8 +152,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>sfml-graphics.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Joyce\SFML-2.5.1-windows-vc15-32-bit\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Joyce\source\repos\CS126FA19\fantastic-finale-914-Chu\fantastic-finale-914-Chu\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
   </ItemDefinitionGroup>
@@ -163,7 +163,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInstant;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings;..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
@@ -182,7 +182,45 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\Action.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionEase.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInstant\CallFunc.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInstant\VisibilityAction.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInstant.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\ActionFloat.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\ActionVec3.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\ActionVec4.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\BezierAction.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\DelayTime.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBack.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBezierAction.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBounce.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseCircle.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseCubic.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseElastic.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseExponential.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseIn.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseInOut.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseOut.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuadratic.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuartic.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuintic.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineIn.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineInOut.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineOut.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\FadeAction.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\MoveAction.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\RepeatAction.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\RotateAction.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\ScaleAction.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Sequence.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Spawn.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\TintAction.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionManager.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionTarget.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\Array.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\TweenFunction.cpp" />
     <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxBaseGui.cpp" />
     <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxButton.cpp" />
     <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxColorPicker.cpp" />
@@ -196,11 +234,48 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\dr_flac.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\dr_mp3.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\dr_wav.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\stb_vorbis.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\Action.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionEase.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInstant\CallFunc.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInstant\VisibilityAction.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInstant.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\ActionFloat.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\ActionVec3.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\ActionVec4.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\BezierAction.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\DelayTime.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBack.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBezierAction.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBounce.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseCircle.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseCubic.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseElastic.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseExponential.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseIn.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseInOut.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseOut.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuadratic.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuartic.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuintic.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineIn.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineInOut.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineOut.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\FadeAction.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\MoveAction.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\RepeatAction.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\RotateAction.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\ScaleAction.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Sequence.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\Spawn.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval\TintAction.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionInterval.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionManager.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionTarget.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\Array.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ofxActionManager.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\TweenFunction.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\uthash.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\utlist.h" />
     <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxBaseGui.h" />
     <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxButton.h" />
     <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxColorPicker.h" />

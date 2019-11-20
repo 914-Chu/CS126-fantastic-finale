@@ -2,7 +2,9 @@
 
 #include "ofMain.h"
 #include "ofImage.h"
-#include "ofxAudioFile.h"
+#include "ofSoundPlayer.h"
+#include "ofxActionManager.h"
+#include "SFML/Graphics.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -23,13 +25,15 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 	
-		 ofxAudioFile audiofile;
 		 ofImage taipei101;
+         ofSoundPlayer drum;
 
-         double playhead;
-         std::atomic<double> playheadControl;
-         double step;
-         double sampleRate;
+         float window_width = 1024;
+         float window_height = 768;
+         int x = 0;
+         int y = 0;
+         int keytime = 8;
+         float size = 10;
 
-         void audioOut(ofSoundBuffer& buffer);
+		 ActionTarget target;
 };

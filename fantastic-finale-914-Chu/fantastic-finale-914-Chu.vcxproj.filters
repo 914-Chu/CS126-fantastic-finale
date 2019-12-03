@@ -160,9 +160,9 @@
     <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxToggle.cpp">
       <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
-    <ClCompile Include="game.cpp" />
     <ClCompile Include="player.cpp" />
-    <ClCompile Include="platforms.cpp" />
+    <ClCompile Include="background.cpp" />
+    <ClCompile Include="life.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -359,9 +359,9 @@
     <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxToggle.h">
       <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
-    <ClInclude Include="game.h" />
     <ClInclude Include="player.h" />
-    <ClInclude Include="platforms.h" />
+    <ClInclude Include="background.h" />
+    <ClInclude Include="life.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

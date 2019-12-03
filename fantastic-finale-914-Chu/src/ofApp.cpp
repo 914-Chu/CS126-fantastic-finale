@@ -3,8 +3,11 @@
 //--------------------------------------------------------------
 void ofApp::setup() {
 
-    taipei101.load("Taipei101.jpg");
+	ofSetBackgroundColor(ofColor(0, 0, 0));
+    //taipei101.load("Taipei101.jpg");
+    mini.load("mini.png");
     drum.load("Bass-Drum-1.wav");
+    background.Load();
 }
 
 //--------------------------------------------------------------
@@ -17,10 +20,11 @@ void ofApp::update() {
 //--------------------------------------------------------------
 void ofApp::draw() {
 
-    taipei101.draw(0, 0, 1024,768);
+    //taipei101.draw(0, 0, 1024,768);
+    background.Draw(window_height, window_width);
+    mini.draw(target.getPosition(), size, size);
     //ofDrawBitmapString(ofToString(ofGetFrameRate()) + "fps", 10, 15);
 
-    ofCircle(target.getPosition(), 20);
 }
 
 //--------------------------------------------------------------
@@ -38,7 +42,8 @@ void ofApp::keyPressed(int key) {
             y = 0;
 		}
         auto seq = Sequence::create(
-            EaseBounceOut::create(MoveTo::create(1, ofVec2f(x, y))),
+            EaseCubicActionOut::create(
+            MoveTo::create(1, ofVec2f(x, y))),
             CallFunc::create([]() {}),
             nullptr);
         target.runAction(seq);
@@ -48,17 +53,19 @@ void ofApp::keyPressed(int key) {
 			y = ofGetHeight();
 		}
         auto seq = Sequence::create(
-            EaseBounceOut::create(MoveTo::create(1, ofVec2f(x, y))),
+            EaseCubicActionOut::create(
+            MoveTo::create(1, ofVec2f(x, y))),
             CallFunc::create([]() {}),
             nullptr);
         target.runAction(seq);
 	} else if ((key == 'd' || key == 'D')) {
         x += dis;
         if (x + size > ofGetWidth()) {
-            x = ofGetWidth();
+            x = ofGetWidth()-size;
 		}
         auto seq = Sequence::create(
-            EaseBounceOut::create(MoveTo::create(1, ofVec2f(x, y))),
+            EaseCubicActionOut::create(
+            MoveTo::create(1, ofVec2f(x, y))),
             CallFunc::create([]() {}),
             nullptr);
         target.runAction(seq);
@@ -68,34 +75,17 @@ void ofApp::keyPressed(int key) {
             x = 0;
 		}
         auto seq = Sequence::create(
-             EaseBounceOut::create(MoveTo::create(1, ofVec2f(x, y))),
+            EaseCubicActionOut::create(
+             MoveTo::create(1, ofVec2f(x, y))),
              CallFunc::create([]() {}),
              nullptr);
+
         target.runAction(seq);
 	}
 }
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key) {}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y) {}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button) {}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button) {}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button) {
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y) {}
-
-//--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y) {}
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h) {}

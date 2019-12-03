@@ -180,8 +180,8 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="platforms.cpp" />
+    <ClCompile Include="background.cpp" />
+    <ClCompile Include="life.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
@@ -236,8 +236,8 @@
     <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxToggle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="game.h" />
-    <ClInclude Include="platforms.h" />
+    <ClInclude Include="background.h" />
+    <ClInclude Include="life.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\Action.h" />

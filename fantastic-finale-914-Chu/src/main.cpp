@@ -3,9 +3,6 @@
 #include <Windows.h>
 #include <mmsystem.h>
 
-
-
-
 using namespace std;
 
 //========================================================================
@@ -22,6 +19,7 @@ int main(){
  //   ofRunApp(window, app);
  //   ofRunMainLoop();
 	ofRunApp(new ofApp());
+
 
 	return 0;
 }

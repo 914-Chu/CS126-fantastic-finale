@@ -2,20 +2,30 @@
 
 Background::Background() {
 
+	ofSetBackgroundColor(ofColor(0, 0, 0));
+	ceiling.load("ceiling.png");
+    left_wall.load("wall.png");
+    right_wall.load("wall.png");
+
 }
 
-Background::~Background() {
+void Background::draw() {
 
+	ceiling.draw(width, 0, ofGetWidth() - width, width);
+
+    left_wall.draw( lw_pos.x, fmod((ofGetHeight() + lw_pos.y), ofGetHeight()) - ofGetHeight(),
+					width, ofGetHeight() * 2);
+    left_wall.draw(lw_pos.x, fmod((ofGetHeight() + lw_pos.y), ofGetHeight()),
+                   width, ofGetHeight() * 2);
+    right_wall.draw(rw_pos.x,fmod((ofGetHeight() + rw_pos.y), ofGetHeight()) - ofGetHeight(),
+				   width, ofGetHeight() * 2);
+    right_wall.draw(rw_pos.x, fmod((ofGetHeight() + rw_pos.y), ofGetHeight()),
+                    width, ofGetHeight() * 2);
 }
 
-void Background::Load() {
+void Background::updateWallsPos() {
 
-    _ceiling.load("ceiling.png");
-    _left_wall.load("wall.png");
-    _right_wall.load("wall.png");
-}
-void Background::Draw(float height, float width) {
-    _ceiling.draw(_object_size, 0, width - _object_size, _object_size);
-    _left_wall.draw(0, 0, _object_size, height);
-    _right_wall.draw(width - _object_size, 0, _object_size, height);
+	lw_pos.y -= 0.05 * ofGetFrameRate();
+    rw_pos.y -= 0.05 * ofGetFrameRate();
+    rw_pos.x = ofGetWidth() - width;
 }

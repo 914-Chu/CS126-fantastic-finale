@@ -8,8 +8,7 @@ class Life {
 	public:
 		Life();
         ~Life();
-        void Update(bool hurt);
-        void Draw();
+        void Update(bool hurt, int level);
         int GetCurrentLife();
 		
 		

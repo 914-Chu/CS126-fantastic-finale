@@ -161,8 +161,9 @@
       <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
     <ClCompile Include="player.cpp" />
-    <ClCompile Include="background.cpp" />
     <ClCompile Include="life.cpp" />
+    <ClCompile Include="platform.cpp" />
+    <ClCompile Include="background.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -360,8 +361,9 @@
       <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
     <ClInclude Include="player.h" />
-    <ClInclude Include="background.h" />
     <ClInclude Include="life.h" />
+    <ClInclude Include="platform.h" />
+    <ClInclude Include="background.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

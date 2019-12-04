@@ -6,11 +6,15 @@ Life::Life() {
 
 Life::~Life() {}
 
-void Life::Update(bool hurt) {
+void Life::Update(bool hurt, int level) {
 
+	if (hurt) {
+        life--;
+    }
+
+	if (level % 5 == 0) {
+        life++;
+	}
 }
 
-void Life::Draw() {
-
-}
 int Life::GetCurrentLife() { return life; }

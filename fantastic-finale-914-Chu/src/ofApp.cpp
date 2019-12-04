@@ -3,11 +3,9 @@
 //--------------------------------------------------------------
 void ofApp::setup() {
 
-	ofSetBackgroundColor(ofColor(0, 0, 0));
-    //taipei101.load("Taipei101.jpg");
     mini.load("mini.png");
     drum.load("Bass-Drum-1.wav");
-    background.Load();
+	target.setPosition(ofVec2f(x,y));
 }
 
 //--------------------------------------------------------------
@@ -15,72 +13,51 @@ void ofApp::update() {
     
     const float delta = ofGetLastFrameTime();
     ActionManager::getInstance()->updateActions(delta);
+    if (y < ofGetHeight()- size) {
+        y += 0.1 * ofGetFrameRate();
+    } else {
+        y = ofGetHeight() - size;
+	}
+
+	auto seq = Sequence::create(
+        EaseCubicActionOut::create(MoveTo::create(1, ofVec2f(x, y))),
+        CallFunc::create([]() {}), nullptr);
+    target.runAction(seq);
+
+	background.updateWallsPos();
+
+	if (ofGetElapsedTimeMillis() > last_time + 600) {
+        last_time = ofGetElapsedTimeMillis();
+		updatePlatforms();
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
 
-    //taipei101.draw(0, 0, 1024,768);
-    background.Draw(window_height, window_width);
-    mini.draw(target.getPosition(), size, size);
-    //ofDrawBitmapString(ofToString(ofGetFrameRate()) + "fps", 10, 15);
-
+	background.draw();
+    drawPlatforms();
+	mini.draw(target.getPosition(), size, size);
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {
 
-     if (key == ' ') {
+    if (key == ' ') {
            drum.play();
     }
 
-
-    float dis = ofGetFrameRate() * 5;
-    if ((key == 'w' || key == 'W')) {
-        y -= dis;
-        if (y - size < 0) {
-            y = 0;
-		}
-        auto seq = Sequence::create(
-            EaseCubicActionOut::create(
-            MoveTo::create(1, ofVec2f(x, y))),
-            CallFunc::create([]() {}),
-            nullptr);
-        target.runAction(seq);
-    }else if ((key == 's' || key == 'S')) { 
-		y += dis;
-        if (y + size > ofGetHeight()) {
-			y = ofGetHeight();
-		}
-        auto seq = Sequence::create(
-            EaseCubicActionOut::create(
-            MoveTo::create(1, ofVec2f(x, y))),
-            CallFunc::create([]() {}),
-            nullptr);
-        target.runAction(seq);
-	} else if ((key == 'd' || key == 'D')) {
+    float dis = 2*ofGetFrameRate();
+    if ((key == 'd' || key == 'D')) {
         x += dis;
-        if (x + size > ofGetWidth()) {
-            x = ofGetWidth()-size;
+        if (x + size > ofGetWidth() - object_size) {
+            x = ofGetWidth() - object_size - size;
 		}
-        auto seq = Sequence::create(
-            EaseCubicActionOut::create(
-            MoveTo::create(1, ofVec2f(x, y))),
-            CallFunc::create([]() {}),
-            nullptr);
-        target.runAction(seq);
     } else if ((key == 'a' || key == 'A')) {
         x -= dis;
-        if (x - size < 0) {
-            x = 0;
-		}
-        auto seq = Sequence::create(
-            EaseCubicActionOut::create(
-             MoveTo::create(1, ofVec2f(x, y))),
-             CallFunc::create([]() {}),
-             nullptr);
-
-        target.runAction(seq);
+        if (x - size < object_size) {
+            x = object_size;
+		} 
 	}
 }
 
@@ -97,5 +74,23 @@ void ofApp::gotMessage(ofMessage msg) {}
 void ofApp::dragEvent(ofDragInfo dragInfo) {
 }
 
-void ofApp::exit() {
+void ofApp::exit() { 
+
+	platforms.clear();
 }
+
+void ofApp::drawPlatforms() {
+
+	for (Platform *p : platforms) {
+		p->draw();
+        p->updatePosition();
+	}
+	
+}
+
+void ofApp::updatePlatforms() { 
+
+	Platform *r = new Normal();
+	platforms.push_back(r);
+}
+    

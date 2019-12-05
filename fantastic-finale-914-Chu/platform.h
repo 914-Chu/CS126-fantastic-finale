@@ -8,7 +8,11 @@ using namespace std;
 
 enum PlatformType {
 	NORMAL,
-	NAIL
+	NAILS,
+	CONVEYORL,
+	CONVEYORR,
+	FAKE,
+	TRAMPOLINE
 };
 
 class Platform {
@@ -44,4 +48,32 @@ class Nail : public Platform {
 	public:
 		Nail();
         ~Nail(){};
+};
+
+class ConveyorL : public Platform {
+
+	public:
+		ConveyorL();
+        ~ConveyorL(){};
+};
+
+class ConveyorR : public Platform {
+
+	public:
+		ConveyorR();
+        ~ConveyorR(){};
+};
+
+class Fake : public Platform {
+
+	public:
+		Fake();
+        ~Fake(){};
+};
+
+class Trampoline : public Platform {
+
+	public:
+		Trampoline();
+         ~Trampoline(){};
 };

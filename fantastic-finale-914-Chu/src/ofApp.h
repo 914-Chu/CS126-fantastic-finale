@@ -10,6 +10,8 @@
 #include "../background.h"
 #include <cmath>
 #include <vector>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
@@ -35,7 +37,6 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-        void drawBackGround();
         void drawPlatforms();
         void updatePlatforms();
 
@@ -50,11 +51,6 @@ class ofApp : public ofBaseApp{
         ActionTarget target;
         Background background;
         ofImage mini;
-        ofImage ceiling;
-        ofImage left_wall;
-        ofImage right_wall;
-        ofVec2f lw_pos = ofVec2f(0.0f, 0.0f);
-        ofVec2f rw_pos = ofVec2f(ofGetWidth() - object_size, 0.0f);
         ofSoundPlayer drum;
         vector<Platform*> platforms;
 

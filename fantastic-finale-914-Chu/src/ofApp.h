@@ -37,16 +37,7 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-        void drawPlatforms();
-        void updatePlatforms();
 
-		float object_size = ofGetWidth()/34.0;
-        float size = ofGetWidth()/17;
-        float last_time = 0;
-        int x = (ofGetWidth()- size)/2;
-        int y = 0;
-        int level = 0;
-        int total_level = 100;
 
         ActionTarget target;
         Background background;

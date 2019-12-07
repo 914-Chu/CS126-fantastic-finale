@@ -1,7 +1,5 @@
 #include "ofMain.h"
 #include "ofApp.h"
-#include <Windows.h>
-#include <mmsystem.h>
 
 using namespace std;
 

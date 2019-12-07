@@ -5,7 +5,7 @@
 #include "ofImage.h"
 #include "ofVec2f.h"
 #include "platform.h"
-#include <vector>
+#include <deque>
 
 enum Direction {
 	
@@ -26,7 +26,7 @@ class Player {
         Direction current_dir = NONE;
         Platform collided;
 
-		float dis = 2 * ofGetFrameRate();
+		float dis = 1.5 * ofGetFrameRate();
         float width = ofGetWidth() / 34.0;
 
 	public:
@@ -34,8 +34,8 @@ class Player {
 		Player();
         ~Player(){};
         void draw();
-        void update();
+        void update(const deque<Platform*> &platforms);
         void goLeft();
         void goRight();
-        /*bool collide(const vector<Platform> &platforms);*/
+        bool collide(const deque<Platform *> &platforms);
 };

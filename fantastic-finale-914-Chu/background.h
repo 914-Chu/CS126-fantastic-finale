@@ -32,5 +32,5 @@ class Background {
         void updateWallsPos();
         void drawPlatforms();
         void updatePlatforms();
-		
+        deque<Platform*> getPlatforms();
 };

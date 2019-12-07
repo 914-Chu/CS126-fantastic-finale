@@ -10,8 +10,8 @@ void ofApp::setup() {
 //--------------------------------------------------------------
 void ofApp::update() {
     
-	player.update();
 	background.update();
+    player.update(background.getPlatforms());
 }
 
 //--------------------------------------------------------------
@@ -30,10 +30,12 @@ void ofApp::keyPressed(int key) {
     } else if ((key == 'a' || key == 'A')) {
         player.goLeft();
 	}
+    player.update(background.getPlatforms());
 }
 
 //--------------------------------------------------------------
-void ofApp::keyReleased(int key) {}
+void ofApp::keyReleased(int key) {
+}
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h) {}

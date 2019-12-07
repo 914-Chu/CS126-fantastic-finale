@@ -85,3 +85,7 @@ void Background::updatePlatforms() {
         platforms.pop_front();
 	}
 }
+
+deque<Platform*> Background::getPlatforms() { 
+	return platforms;
+ }

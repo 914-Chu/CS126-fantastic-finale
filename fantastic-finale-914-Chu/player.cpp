@@ -2,13 +2,14 @@
 
 Player::Player() {
     player.load("mini.png");
-    size = ofVec2f(ofGetWidth() / 17, ofGetHeight() / 12.8);
-    position = ofVec2f((ofGetWidth() - size.x) / 2, width);
     target.setPosition(position);
-    dead = false;
+    adjusted = false;
+    life = 10;
 }
 
-void Player::draw() { player.draw(target.getPosition(), size.x, size.y); }
+void Player::draw() { 
+	player.draw(target.getPosition(), size.x, size.y);
+}
 
 void Player::update(const deque<Platform *> &platforms) {
     const float delta = ofGetLastFrameTime();
@@ -23,34 +24,56 @@ void Player::update(const deque<Platform *> &platforms) {
                     break;
                 case NAILS:
                     position.y = collided.getPosition().y - size.y;
+                    if (!adjusted) {
+                        life --;
+                        adjusted = true;
+                    }
                     break;
                 case CONVEYORL:
                     position.y = collided.getPosition().y - size.y * 1.2;
                     position.x -= dis * 0.1;
+                    if (!adjusted) {
+                        life++;
+                        adjusted = true;
+                    }
                     break;
                 case CONVEYORR:
                     position.y = collided.getPosition().y - size.y * 1.2;
                     position.x += dis * 0.1;
+                    if (!adjusted) {
+                        life++;
+                        adjusted = true;
+                    }
                     break;
                 case TRAMPOLINE:
-                    position.y = collided.getPosition().y - size.y * 1.8;
+                    position.y = collided.getPosition().y - size.y * 3;
+                    if (!adjusted) {
+                        life += 2;
+                        adjusted = true;
+                    }
                     break;
                 case FAKE:
-                    // position.y = collided.getPosition().y - size.y * 1.2;
+                    if (!adjusted) {
+                        life-=2;
+                        adjusted = true;
+                    }
                     break;
             }
-
         } else if (collided.getPosition().y - size.y < width) {
             position.y = width;
-        } else {
-            position.y = ofGetHeight() - size.y;
+            if (!adjusted) {
+                life -= 3;
+                adjusted = true;
+            }
         }
     } else {
         position.y += 0.12 * ofGetFrameRate();
+        adjusted = false;
     }
 
     adjustX();
     adjustY();
+    adjustLife();
 
     auto seq = Sequence::create(
         EaseCircleActionOut::create(MoveTo::create(1, position)),
@@ -92,10 +115,22 @@ void Player::adjustX() {
 void Player::adjustY() {
     if (position.y >= ofGetHeight()) {
         position.y = ofGetHeight();
-        dead = true;
+        life = 0;
     } else if (position.y <= width) {
         position.y = width;
+        if (!adjusted) {
+            life -= 3;
+            adjusted = true;
+        }
     }
 }
 
-bool Player::isDead() { return dead; }
+void Player::adjustLife() {
+    if (life > 10) {
+        life = 10;
+    } else if (life < 0) {
+        life = 0;
+	}
+}
+
+int Player::getLife() { return life; }

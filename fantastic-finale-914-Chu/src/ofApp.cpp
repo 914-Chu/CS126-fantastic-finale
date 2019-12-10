@@ -6,14 +6,15 @@ void ofApp::setup() {
     bgm.play();
     start.load("start.png");
     end.load("exit.png");
+    font.load("font.ttf", 32);
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
     background.update();
-    if (current_state == GameState::RUN) {
+	if (current_state == GameState::RUN) {
         player.update(background.getPlatforms());
-        if (player.isDead()) {
+        if (player.getLife()==0) {
             current_state = GameState::EXIT;
         }
     }
@@ -22,7 +23,7 @@ void ofApp::update() {
 //--------------------------------------------------------------
 void ofApp::draw() {
     background.draw();
-
+    font.drawString("LIFE :\n" + to_string(player.getLife()), ofGetWidth() * 0.8,ofGetHeight() * 0.2);
     switch (current_state) {
         case GameState::START:
             start.draw(ofGetWidth()*(1.0/7),ofGetHeight()*(1.0/4),ofGetWidth()/2,ofGetHeight()/2);
@@ -48,17 +49,5 @@ void ofApp::keyPressed(int key) {
     }
     player.update(background.getPlatforms());
 }
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key) {}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h) {}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg) {}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo) {}
 
 void ofApp::exit() {}

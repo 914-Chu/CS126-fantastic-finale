@@ -7,6 +7,7 @@
 #include "ofMain.h"
 #include "ofSoundPlayer.h"
 #include "ofUtils.h"
+#include "ofTrueTypeFont.h"
 #include "ofxActionManager.h"
 
 using namespace std;
@@ -21,6 +22,7 @@ class ofApp : public ofBaseApp {
     Player player;
     ofImage start;
     ofImage end;
+    ofTrueTypeFont font;
 
    public:
     void setup();
@@ -28,8 +30,4 @@ class ofApp : public ofBaseApp {
     void draw();
     void exit();
     void keyPressed(int key);
-    void keyReleased(int key);
-    void windowResized(int w, int h);
-    void dragEvent(ofDragInfo dragInfo);
-    void gotMessage(ofMessage msg);
 };

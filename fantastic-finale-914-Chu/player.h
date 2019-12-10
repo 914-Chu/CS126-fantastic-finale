@@ -4,28 +4,26 @@
 #include "ofMain.h"
 #include "ofVec2f.h"
 #include "ofxActionManager.h"
+#include "ofGraphics.h"
+#include "ofTrueTypeFont.h"
 #include "platform.h"
 
-enum Direction {
-
-    NONE,
-    LEFT,
-    RIGHT,
-    DOWN
-};
+using namespace std;
 
 class Player {
    private:
-    ofVec2f size;
-    ofVec2f position;
+    ofVec2f size = ofVec2f(ofGetWidth() / 17, ofGetHeight() / 12.8);
+    ofVec2f position = ofVec2f((ofGetWidth() - size.x) / 2, width+1);
     ofImage player;
     ActionTarget target;
-    Direction current_dir = NONE;
     Platform collided;
+    ofTrueTypeFont font;
 
     float dis = 1.5 * ofGetFrameRate();
     float width = ofGetWidth() / 34.0;
-    bool dead;
+    bool adjusted;
+    int life;
+
 
    public:
     Player();
@@ -37,5 +35,6 @@ class Player {
     bool collide(const deque<Platform *> &platforms);
     void adjustX();
     void adjustY();
-    bool isDead();
+    void adjustLife();
+    int getLife();
 };

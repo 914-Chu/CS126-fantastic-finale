@@ -21,9 +21,11 @@ class Player {
 
     float dis = 1.5 * ofGetFrameRate();
     float width = ofGetWidth() / 34.0;
-    bool adjusted;
+    float level_timer = 0;
     int life;
-
+    int level = 0;
+    static int record;
+    bool adjusted;
 
    public:
     Player();
@@ -37,4 +39,6 @@ class Player {
     void adjustY();
     void adjustLife();
     int getLife();
+    int getLevel();
+    int getRecord();
 };

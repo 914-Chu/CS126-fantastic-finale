@@ -6,7 +6,7 @@
 
 using namespace std;
 
-enum PlatformType { NORMAL, NAILS, CONVEYORL, CONVEYORR, FAKE, TRAMPOLINE };
+enum PlatformType { NORMAL, NAILS, CONVEYORL, CONVEYORR, FAKE, TRAMPOLINE};
 
 class Platform {
    protected:

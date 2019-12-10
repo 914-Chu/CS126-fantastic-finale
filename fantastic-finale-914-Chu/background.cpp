@@ -16,8 +16,8 @@ void Background::draw() {
 void Background::update() {
     updateWallsPos();
 
-    if (ofGetElapsedTimeMillis() > last_time + 600) {
-        last_time = ofGetElapsedTimeMillis();
+    if (ofGetElapsedTimeMillis() > platform_timer + 600) {
+        platform_timer = ofGetElapsedTimeMillis();
         updatePlatforms();
     }
 }
@@ -85,3 +85,5 @@ void Background::updatePlatforms() {
 }
 
 deque<Platform *> Background::getPlatforms() { return platforms; }
+
+

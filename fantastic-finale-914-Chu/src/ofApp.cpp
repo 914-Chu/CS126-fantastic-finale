@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup() {
     bgm.load("bgm.wav");
-    bgm.play();
+    //bgm.play();
     start.load("start.png");
     end.load("exit.png");
     font.load("font.ttf", 32);
@@ -23,7 +23,8 @@ void ofApp::update() {
 //--------------------------------------------------------------
 void ofApp::draw() {
     background.draw();
-    font.drawString("LIFE :\n" + to_string(player.getLife()), ofGetWidth() * 0.8,ofGetHeight() * 0.2);
+    font.drawString("LIFE :\n" + to_string(player.getLife()), ofGetWidth() * 0.8,ofGetHeight() * 0.1);
+    font.drawString("LEVEL :\n" + to_string(player.getLevel()),  ofGetWidth() * 0.8,ofGetHeight() * 0.25);
     switch (current_state) {
         case GameState::START:
             start.draw(ofGetWidth()*(1.0/7),ofGetHeight()*(1.0/4),ofGetWidth()/2,ofGetHeight()/2);

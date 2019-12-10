@@ -12,8 +12,7 @@ using namespace std;
 class Background {
    private:
     float width = ofGetWidth() / 34.0;
-    float last_time = 0;
-    int level = 0;
+    float platform_timer = 0;
 
     ofImage ceiling;
     ofImage left_wall;

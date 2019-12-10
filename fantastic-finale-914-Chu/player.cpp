@@ -79,6 +79,11 @@ void Player::update(const deque<Platform *> &platforms) {
         EaseCircleActionOut::create(MoveTo::create(1, position)),
         CallFunc::create([]() {}), nullptr);
     target.runAction(seq);
+
+	if (ofGetElapsedTimeMillis() > level_timer + 4000 && life > 0) {
+        level_timer = ofGetElapsedTimeMillis();
+        level++;
+    }
 }
 
 void Player::goLeft() {
@@ -134,3 +139,7 @@ void Player::adjustLife() {
 }
 
 int Player::getLife() { return life; }
+
+int Player::getLevel() { return level; }
+
+int Player::getRecord() { return record; }

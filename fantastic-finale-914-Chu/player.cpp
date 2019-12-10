@@ -2,13 +2,15 @@
 
 Player::Player() {
     player.load("mini.png");
+    scream.load("scream.wav");
+    hit.load("hit.wav");
     target.setPosition(position);
     adjusted = false;
     life = 10;
 }
 
-void Player::draw() { 
-	player.draw(target.getPosition(), size.x, size.y);
+void Player::draw() {
+    player.draw(target.getPosition(), size.x, size.y);
 }
 
 void Player::update(const deque<Platform *> &platforms) {
@@ -60,6 +62,7 @@ void Player::update(const deque<Platform *> &platforms) {
                     break;
             }
         } else if (collided.getPosition().y - size.y < width) {
+            hit.play();
             position.y = width;
             if (!adjusted) {
                 life -= 3;
@@ -103,6 +106,7 @@ bool Player::collide(const deque<Platform *> &platforms) {
             position.x + size.x >= platform->getPosition().x &&
             position.x <= platform->getPosition().x + platform->getSize().x) {
             collided = *platform;
+            if (collided.getType() == NAILS) hit.play();
             return true;
         }
     }
@@ -119,11 +123,13 @@ void Player::adjustX() {
 
 void Player::adjustY() {
     if (position.y >= ofGetHeight()) {
+        scream.play();
         position.y = ofGetHeight();
         life = 0;
     } else if (position.y <= width) {
         position.y = width;
         if (!adjusted) {
+            hit.play();
             life -= 3;
             adjusted = true;
         }
@@ -141,5 +147,3 @@ void Player::adjustLife() {
 int Player::getLife() { return life; }
 
 int Player::getLevel() { return level; }
-
-int Player::getRecord() { return record; }

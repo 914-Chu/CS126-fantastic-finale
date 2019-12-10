@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup() {
     bgm.load("bgm.wav");
-    //bgm.play();
+    bgm.play();
     start.load("start.png");
     end.load("exit.png");
     font.load("font.ttf", 32);
@@ -16,6 +16,7 @@ void ofApp::update() {
         player.update(background.getPlatforms());
         if (player.getLife()==0) {
             current_state = GameState::EXIT;
+            bgm.stop();
         }
     }
 }

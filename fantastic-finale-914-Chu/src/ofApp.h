@@ -19,6 +19,8 @@ class ofApp : public ofBaseApp {
     ofSoundPlayer bgm;
     GameState current_state = GameState::START;
     Player player;
+    ofImage start;
+    ofImage end;
 
    public:
     void setup();

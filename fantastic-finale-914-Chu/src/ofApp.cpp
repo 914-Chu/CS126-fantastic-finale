@@ -4,14 +4,18 @@
 void ofApp::setup() {
     bgm.load("bgm.wav");
     bgm.play();
+    start.load("start.png");
+    end.load("exit.png");
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
     background.update();
-    player.update(background.getPlatforms());
-    if (player.isDead()) {
-        current_state = GameState::EXIT;
+    if (current_state == GameState::RUN) {
+        player.update(background.getPlatforms());
+        if (player.isDead()) {
+            current_state = GameState::EXIT;
+        }
     }
 }
 
@@ -21,13 +25,13 @@ void ofApp::draw() {
 
     switch (current_state) {
         case GameState::START:
-
+            start.draw(ofGetWidth()*(1.0/7),ofGetHeight()*(1.0/4),ofGetWidth()/2,ofGetHeight()/2);
             break;
         case GameState::RUN:
             player.draw();
             break;
         case GameState::EXIT:
-
+            end.draw(ofGetWidth() * (1.0 /7), ofGetHeight() * (1.0 /4),ofGetWidth() / 2, ofGetHeight() / 2);
             break;
     }
 }

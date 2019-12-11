@@ -36,7 +36,7 @@
     * Randomly generate different type of platforms, but the ratio is uneven
     * [RESOLVED]: Control random number with time.
   * Make player stay on platforms when collide, but player keep jumping or go through. (unstable y position.)
-    * ~~[RESOLVED]: Adjust y position with platform's y position and player's size~~\n
+    * ~~[RESOLVED]: Adjust y position with platform's y position and player's size~~\
       (player stop jumping only on some platforms and moving too slow)
     * [RESOLVED]: Adjust y position with platform's y position and different multiples of player's size.
 - Try to use ofxSecondWindow addon but unable to run the program after including it. (fantastic-finale-914-Chu_debug.exe disappear)

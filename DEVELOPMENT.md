@@ -23,10 +23,10 @@
     * [RESOLVED]: Update y position only with mulitple of the frame rate.
 - Test animation with sprite sheets.
   * Unable to use ofxSpriteSheetRenderer(built in function had different types of parameters)[UNRESOLVE]
-  
+- Add Background class, move ceiling and walls movement into Background class.
+
  #Week 3
 
-- Add Background class, move ceiling and walls movement into Background class.
 - Update Platform class(only normal)
   * Test platform movement (going up).
   * Add method to generate platform with random x position from the bottom, unable to trace generated platform.
@@ -39,12 +39,14 @@
     * ~~[RESOLVED]: Adjust y position with platform's y position and player's size~~ 
       (player stop jumping only on some platforms and moving too slow)
     * [RESOLVED]: Adjust y position with platform's y position and different multiples of player's size.
-     
+- Try to use ofxSecondWindow addon but unable to run the program after including it. (fantastic-finale-914-Chu_debug.exe disappear)
+  * [RESOLVED]: unable to fix it so delete everything and reset all the set up, reclone the project. 
+  
 #Week 4
 
 - Add different platforms' features.
 - Add life and level features.
-- Integrate classes and finish management of switching game state.
+- Integrate classes and finish management of switching game state. (Start and End)
 - Seperate classes. [UNRESOLVED: Player class take care of too many things]
   * Thingking of moving life and level management into playerStatus class.
   

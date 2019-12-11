@@ -39,7 +39,8 @@
     * ~~[RESOLVED]: Adjust y position with platform's y position and player's size~~\
       (player stop jumping only on some platforms and moving too slow)
     * [RESOLVED]: Adjust y position with platform's y position and different multiples of player's size.
-- Try to use ofxSecondWindow addon but unable to run the program after including it. (fantastic-finale-914-Chu_debug.exe disappear)
+- Try to use ofxSecondWindow addon but unable to run the program after including it.\ 
+  (fantastic-finale-914-Chu_debug.exe disappear)
   * [RESOLVED]: unable to fix it so delete everything and reset all the set up, reclone the project. 
   
 #Week 4

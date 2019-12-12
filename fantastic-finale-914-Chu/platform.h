@@ -8,22 +8,32 @@ using namespace std;
 
 enum PlatformType { NORMAL, NAILS, CONVEYORL, CONVEYORR, FAKE, TRAMPOLINE};
 
+/*
+ * This is the base class of all types of platform. 
+ * Take care of platform's movement and features.
+ */
+
+
 class Platform {
+
    protected:
     ofImage platform;
-    ofVec2f size = ofVec2f(ofGetWidth() / 5.7, ofGetHeight() / 30.7);
-    ofVec2f position = ofVec2f(ofRandom(ofGetWidth() * (3.0 / 4) - size.x),
-                               ofGetHeight() - size.y);
+    ofVec2f size;
+    ofVec2f position;
     PlatformType type;
+    float position_ratio; // relation with player position.
+    int life_effect;      // specific effect on player.
 
    public:
-    Platform(){};
+    Platform();
     ~Platform(){};
     PlatformType getType();
     ofVec2f getSize();
     ofVec2f getPosition();
     void updatePosition();
     void draw();
+    float getPositionRatio();
+    int getLifeEffect();
 };
 
 class Normal : public Platform {

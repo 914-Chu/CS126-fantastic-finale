@@ -11,10 +11,14 @@
 
 using namespace std;
 
+/*
+ * This class manage player's movement and keep track of currrent status.
+ */
+
 class Player {
    private:
-    ofVec2f size = ofVec2f(ofGetWidth() / 17, ofGetHeight() / 12.8);
-    ofVec2f position = ofVec2f((ofGetWidth() - size.x) / 2, width+size.y);
+    ofVec2f size;
+    ofVec2f position;
     ofImage player;
     ActionTarget target;
     Platform collided;
@@ -22,12 +26,13 @@ class Player {
     ofSoundPlayer scream;
     ofSoundPlayer hit;
 
-    float dis = 1.5 * ofGetFrameRate();
-    float width = ofGetWidth() / 34.0;
-    float level_timer = 0;
+    float dis;
+    float width;
+    float level_timer;
     int life;
-    int level = 0;
-    bool adjusted;
+    int level;
+    bool platform_stay;
+    bool ceiling_touched;
 
    public:
     Player();
@@ -36,10 +41,12 @@ class Player {
     void update(const deque<Platform *> &platforms);
     void goLeft();
     void goRight();
-    bool collide(const deque<Platform *> &platforms);
     void adjustX();
     void adjustY();
     void adjustLife();
+    void adjustLevel();
+    ofVec2f positionWithPlatform();
     int getLife();
-    int getLevel();
+    int getLevel();    
+	bool collide(const deque<Platform *> &platforms);
 };

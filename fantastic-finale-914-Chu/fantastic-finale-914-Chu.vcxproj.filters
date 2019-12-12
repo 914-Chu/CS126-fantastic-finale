@@ -157,7 +157,6 @@
     <ClCompile Include="background.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="platform.cpp" />
-    <ClCompile Include="playerStatus.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -354,7 +353,6 @@
     <ClInclude Include="background.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="platform.h" />
-    <ClInclude Include="playerStatus.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

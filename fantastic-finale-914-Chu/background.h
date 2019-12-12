@@ -9,6 +9,12 @@
 
 using namespace std;
 
+/*
+ * This class is used to manage elements of backgrounds, 
+ * including the ceiling, walls at the side, and random platforms.
+ *
+ */
+
 class Background {
    private:
     float width = ofGetWidth() / 34.0;

@@ -1,5 +1,9 @@
 #include "background.h"
 
+/*
+ * Default Constructor 
+ */
+
 Background::Background() {
     ofSetBackgroundColor(ofColor(0, 0, 0));
     ceiling.load("ceiling.png");
@@ -8,23 +12,34 @@ Background::Background() {
     srand(time(0));
 }
 
+/*
+ * Draw updated background
+ */
+
 void Background::draw() {
     drawPlatforms();
     drawWallCeiling();
 }
 
+/* 
+ * Update the position of walls to make it keep scrolling upward.
+ * Randomly generate new platform every 600 milli second.
+ */
+
 void Background::update() {
     updateWallsPos();
-
     if (ofGetElapsedTimeMillis() > platform_timer + 600) {
         platform_timer = ofGetElapsedTimeMillis();
         updatePlatforms();
     }
 }
 
+/*
+ * Draw ceiling and walls with updated positions.
+ */
+
 void Background::drawWallCeiling() {
     ceiling.draw(width, 0, ofGetWidth() * (3.0 / 4), width);
-
     left_wall.draw(
         lw_pos.x,
         fmod((ofGetHeight() + lw_pos.y), ofGetHeight()) - ofGetHeight(), width,
@@ -39,11 +54,21 @@ void Background::drawWallCeiling() {
                     width, ofGetHeight() * 2);
 }
 
+/*
+ * Update position of walls:
+ * x: in terms of window width.
+ * y: in terms of current frame rate.
+ */
+
 void Background::updateWallsPos() {
     lw_pos.y -= 0.05 * ofGetFrameRate();
     rw_pos.y -= 0.05 * ofGetFrameRate();
     rw_pos.x = ofGetWidth() * (3.0 / 4);
 }
+
+/*
+ * Draw all the platforms.
+ */
 
 void Background::drawPlatforms() {
     for (Platform *p : platforms) {
@@ -51,6 +76,11 @@ void Background::drawPlatforms() {
         p->updatePosition();
     }
 }
+
+/*
+ * Update platforms stored in the deque.
+ * Randomly add new platform and delete those move out of the window.
+ */
 
 void Background::updatePlatforms() {
     Platform *temp;

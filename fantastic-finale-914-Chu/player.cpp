@@ -1,103 +1,84 @@
 #include "player.h"
 
+/*
+ * Default constructor 
+ */
+
 Player::Player() {
     player.load("mini.png");
     scream.load("scream.wav");
     hit.load("hit.wav");
+    size = ofVec2f(ofGetWidth() / 17, ofGetHeight() / 12.8);
+    position = ofVec2f((ofGetWidth() - size.x) / 2, width + size.y);
     target.setPosition(position);
-    adjusted = false;
+    dis = 1.5 * ofGetFrameRate();
+    width = ofGetWidth() / 34.0;
+    level_timer = 0;
     life = 10;
+    level = 0;
+    platform_stay = false;
+    ceiling_touched = false;
 }
 
 void Player::draw() {
     player.draw(target.getPosition(), size.x, size.y);
 }
 
+/*
+ * Update position and life according to player's situation.
+ * Except for the FAKE platform, player will stay on the platfrom once collided.
+ * Life will be adjusted only once on each platform.
+ */
+
 void Player::update(const deque<Platform *> &platforms) {
     const float delta = ofGetLastFrameTime();
     ActionManager::getInstance()->updateActions(delta);
 
     if (collide(platforms)) {
-        if (collided.getPosition().y - size.y <= ofGetHeight() - size.y &&
-            collided.getPosition().y - size.y >= width) {
-            switch (collided.getType()) {
-                case NORMAL:
-                    position.y = collided.getPosition().y - size.y * 1.2;
-                    break;
-                case NAILS:
-                    position.y = collided.getPosition().y - size.y;
-                    if (!adjusted) {
-                        life --;
-                        adjusted = true;
-                    }
-                    break;
-                case CONVEYORL:
-                    position.y = collided.getPosition().y - size.y * 1.2;
-                    position.x -= dis * 0.1;
-                    if (!adjusted) {
-                        life++;
-                        adjusted = true;
-                    }
-                    break;
-                case CONVEYORR:
-                    position.y = collided.getPosition().y - size.y * 1.2;
-                    position.x += dis * 0.1;
-                    if (!adjusted) {
-                        life++;
-                        adjusted = true;
-                    }
-                    break;
-                case TRAMPOLINE:
-                    position.y = collided.getPosition().y - size.y * 3;
-                    if (!adjusted) {
-                        life += 2;
-                        adjusted = true;
-                    }
-                    break;
-                case FAKE:
-                    if (!adjusted) {
-                        life-=2;
-                        adjusted = true;
-                    }
-                    break;
+			if (collided.getType() != FAKE) {
+                position = positionWithPlatform();
+			}
+            if (!platform_stay) {
+                life += collided.getLifeEffect();
+                platform_stay = true;
             }
-        } else if (collided.getPosition().y - size.y < width) {
-            hit.play();
-            position.y = width;
-            if (!adjusted) {
-                life -= 3;
-                adjusted = true;
-            }
-        }
     } else {
         position.y += 0.12 * ofGetFrameRate();
-        adjusted = false;
+        platform_stay = false;
     }
 
     adjustX();
     adjustY();
     adjustLife();
+    adjustLevel();
 
     auto seq = Sequence::create(
         EaseCircleActionOut::create(MoveTo::create(1, position)),
         CallFunc::create([]() {}), nullptr);
     target.runAction(seq);
-
-	if (ofGetElapsedTimeMillis() > level_timer + 4000 && life > 0) {
-        level_timer = ofGetElapsedTimeMillis();
-        level++;
-    }
 }
+
+/*
+ * Update postion x when going left.
+ */
 
 void Player::goLeft() {
     position.x -= dis;
     adjustX();
 }
 
+/*
+ * Update postion x when going right.
+ */
+
 void Player::goRight() {
     position.x += dis;
     adjustX();
 }
+
+/*
+ * Check if the player fall on any platform, store the collided platform type.
+ */
 
 bool Player::collide(const deque<Platform *> &platforms) {
     for (Platform *platform : platforms) {
@@ -113,6 +94,10 @@ bool Player::collide(const deque<Platform *> &platforms) {
     return false;
 }
 
+/*
+ * Keep the player stay within the two walls.
+ */
+
 void Player::adjustX() {
     if (position.x < width) {
         position.x = width;
@@ -121,20 +106,30 @@ void Player::adjustX() {
     }
 }
 
+/*
+ * Keep the player stay beneath the ceiling and end the game when fall out of the window.
+ */
+
 void Player::adjustY() {
     if (position.y >= ofGetHeight()) {
         scream.play();
         position.y = ofGetHeight();
         life = 0;
     } else if (position.y <= width) {
+        hit.play();
         position.y = width;
-        if (!adjusted) {
-            hit.play();
+        if (!ceiling_touched) {
             life -= 3;
-            adjusted = true;
+            ceiling_touched = true;
         }
-    }
+    } else {
+        ceiling_touched = false;
+	}
 }
+
+/*
+ * Keep life in the range from 0 to 10.
+ */
 
 void Player::adjustLife() {
     if (life > 10) {
@@ -144,6 +139,34 @@ void Player::adjustLife() {
 	}
 }
 
+/*
+ * Update player's level every 4000 milli seconds.
+ */
+
+void Player::adjustLevel() {
+    if (ofGetElapsedTimeMillis() > level_timer + 4000 && life > 0) {
+        level_timer = ofGetElapsedTimeMillis();
+        level++;
+    }
+}
+
+/*
+ * Generate player's position according to the collided platform's feature. 
+ */
+
+ofVec2f Player::positionWithPlatform() { 
+	if (collided.getType() == CONVEYORL) {
+        position.x -= dis * 0.1;
+    } else if (collided.getType() == CONVEYORR) {
+        position.x += dis * 0.1;
+	}
+	return ofVec2f(position.x,collided.getPosition().y - size.y * collided.getPositionRatio());
+}
+
 int Player::getLife() { return life; }
 
 int Player::getLevel() { return level; }
+
+
+
+

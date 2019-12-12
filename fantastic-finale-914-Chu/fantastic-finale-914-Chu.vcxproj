@@ -183,7 +183,6 @@
     <ClCompile Include="background.cpp" />
     <ClCompile Include="platform.cpp" />
     <ClCompile Include="player.cpp" />
-    <ClCompile Include="playerStatus.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\Action.cpp" />
@@ -240,7 +239,6 @@
     <ClInclude Include="background.h" />
     <ClInclude Include="platform.h" />
     <ClInclude Include="player.h" />
-    <ClInclude Include="playerStatus.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\Action.h" />
     <ClInclude Include="..\..\..\..\..\Desktop\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxActionManager\src\ActionEase.h" />

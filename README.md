@@ -12,6 +12,8 @@
 
 - [OpenFramWorks 0.11.0](https://openframeworks.cc/)
   - [ofxGui](https://openframeworks.cc/documentation/ofxGui/)
+    - Make sure to create the project through openFrameWorks's ProjectGenerator.
+    - Put all related .png and .wav files inside \bin\data
   - [ofxActionManager](https://github.com/Furkanzmc/ofxActionManager)
   
 ## Game

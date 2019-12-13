@@ -20,7 +20,8 @@
 
 ### Rule
 
-- Player will die when life is zero or fall out of the screen.
+- Player will die when life is zero or fall out of the screen.\
+  (Download demo.mp4/demo.mov to see example)
 
 ### States
 

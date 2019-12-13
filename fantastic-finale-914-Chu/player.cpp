@@ -163,10 +163,8 @@ ofVec2f Player::positionWithPlatform() {
 	return ofVec2f(position.x,collided.getPosition().y - size.y * collided.getPositionRatio());
 }
 
-int Player::getLife() { return life; }
-
 int Player::getLevel() { return level; }
 
-
+int Player::getLife() { return life; }
 
 

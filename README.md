@@ -16,12 +16,11 @@
     - Put all related .png and .wav files inside \bin\data
   - [ofxActionManager](https://github.com/Furkanzmc/ofxActionManager)
   
-## Game
+## Game (Download demo.mp4 / demo.mov to see example)
 
 ### Rule
 
-- Player will die when life is zero or fall out of the screen.\
-  (Download demo.mp4/demo.mov to see example)
+- Player will die when life is zero or fall out of the screen.
 
 ### States
 

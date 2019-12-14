@@ -60,8 +60,8 @@
 <img src="https://github.com/CS126FA19/fantastic-finale-914-Chu/blob/master/pics/fake.png" alt="alt text" width="100" height="20">
 
 - TRAMPOLINE
- * Make player bounce
- * Increase life by 2
+  * Make player bounce
+  * Increase life by 2
 <img src="https://github.com/CS126FA19/fantastic-finale-914-Chu/blob/master/pics/trampoline.png" alt="alt text" width="100" height="20">
 
 ### Keyboard
